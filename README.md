@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @scoley77
 - 👀 I’m interested in video game development!
-- 🌱 I’m currently learning python! If you have any advice, I'd love to hear :)
+- 🌱 I’m currently on my way to becoming a pythonista! If you have any advice, I'd love to hear :)
 - 💞️ I’m looking to collaborate on ... nothing at the moment, but thank you for your interest!
 - 📫 How to reach me ...
 
