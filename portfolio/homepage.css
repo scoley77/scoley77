@@ -1,0 +1,25 @@
+.hero-section {
+  height: 450px;
+  width: 100%;
+  background-color: #0d687e;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.hero-section .hero-left-column iframe {
+  height: 450px;
+}
+
+.hero-section .hero-right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hero-section .hero-right-column .jobs-wrapper {
+  color: #ffffff;
+  font-family: 'Amatic SC';
+  font-weight: 700;
+}

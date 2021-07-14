@@ -1,0 +1,116 @@
+.nav-wrapper {
+  height: 240px;
+  width: 100%;
+}
+
+.top-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.top-nav-wrapper .dropdown-wrap {
+  visibility: hidden;
+  width: 20vw;
+}
+
+.top-nav-wrapper .brand-wrap {
+  width: 30vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.top-nav-wrapper .brand-wrap .logo-wrapper-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav-wrapper .brand-wrap .logo-wrapper-nav img {
+  height: 165px;
+  
+}
+
+.top-nav-wrapper .brand-wrap .meta-links-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav-wrapper .brand-wrap .meta-links-wrap .meta-link {
+  text-align: center;
+  font-weight: 500;
+}
+
+.top-nav-wrapper .brand-wrap .meta-links-wrap .meta-link a {
+  text-decoration: none;
+  color: #ef72a1;
+}
+
+.top-nav-wrapper .heart-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.top-nav-wrapper .heart-wrapper img {
+  height: 60px;
+  margin-bottom: 70px;
+}
+
+
+
+
+/* Media Queries and Dropdown Styles */
+@media (max-width: 48em) {
+  .top-nav-wrapper .dropdown-wrap {
+    align-self: flex-start;
+    visibility: visible;
+    order: 1;
+    flex: initial;
+    margin: 0px;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-btn {
+    padding: 19.5px;
+    font-size: 26px;
+    margin-left: 42px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-btn i {
+    color: darkcyan;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-menu {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ef72a1;
+    width: 50vw;
+    height: 220px;
+    margin: 0;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-menu .drop-link {
+    padding: 22px 42px;
+    font-size: 24px;
+    height: 100%;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-menu .drop-link:hover {
+    background-color: #86264e;
+  }
+
+  .top-nav-wrapper .dropdown-wrap .dropdown-menu .drop-link a {
+    color: white;
+  }
+}
