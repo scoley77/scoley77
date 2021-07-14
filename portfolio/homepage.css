@@ -16,10 +16,44 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-left: -20px;
 }
 
 .hero-section .hero-right-column .jobs-wrapper {
+  margin-top: 5px;
+}
+
+.hero-section .hero-right-column .jobs-wrapper h2 {
   color: #ffffff;
   font-family: 'Amatic SC';
   font-weight: 700;
+  font-size: 2.7em;
+}
+
+.hero-section .hero-right-column .jobs-wrapper #job1 {
+  transition: 0.5s;
+}
+
+.hero-section .hero-right-column .jobs-wrapper #job2 {
+  transition: 1.25s;
+}
+
+.hero-section .hero-right-column .jobs-wrapper #job3 {
+  transition: 2.0s;
+}
+
+.hero-section .hero-right-column .jobs-button {
+  margin-bottom: 40px;
+}
+
+.hero-section .hero-right-column .jobs-button button {
+  color: #ffffff;
+  background-color: #ef72a1;
+  height: 50px;
+  width: 210px;
+  border: 1px solid #cc608a;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.0em;
 }
