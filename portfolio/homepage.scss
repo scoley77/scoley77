@@ -1,0 +1,274 @@
+$black: #000000;
+$white: #ffffff;
+$teal: #0d687e;
+$pink: #ef72a1;
+$gray: #7e7d7d;
+$rare_pink: #cc608a;
+
+$title: 'Amatic SC', cursive;
+$sans: 'Raleway', sans-serif;
+
+$c-s-height: 200px;
+$b1-s-height: 75px;
+$b2-s-height: 60px;
+$b3-s-height: 45px;
+
+$c-h-height: 250px;
+$b1-h-height: 85px;
+$b2-h-height: 70px;
+$b3-h-height: 55px;
+
+$c-trans: 0.5s;
+$b-trans: 0.2s;
+
+@mixin fade_in($trans) {
+  opacity: 0;
+    -moz-transition: opacity $trans;
+    -webkit-transition: opacity $trans;
+    -o-transition: opacity $trans;
+    transition: opacity $trans;
+}
+
+@mixin thoughts-start($height, $trans, $top, $left) {
+  height: $height;
+  transition: $trans;
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin thoughts-hov($height, $top, $left) {
+  height: $height;
+  top: $top;
+  left: $left;
+}
+
+.hero-section {
+  height: 450px;
+  width: 100%;
+  background-color: $teal;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+
+  .hero-left-column {
+    iframe {
+    height: 450px;
+    }
+  }
+
+  .hero-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -20px;
+
+    .jobs-wrapper {
+      margin-top: 5px;
+
+      h2 {
+        color: $white;
+        font-family: $title;
+        font-weight: 700;
+        font-size: 2.7em;
+      }
+
+      #job1 {
+        @include fade_in(0.75s);
+      }
+
+      #job2 {
+        @include fade_in(1.5s);
+      }
+
+      #job3 {
+        @include fade_in(3s);
+      }
+    }
+
+    .jobs-button {
+      margin-bottom: 40px;
+
+      button {
+        color: $white;
+        background-color: $pink;
+        height: 50px;
+        width: 210px;
+        border: 1px solid $rare_pink;
+        border-radius: 5px;
+        font-family: $sans;
+        font-weight: 500;
+        font-size: 1.0em;
+      }
+    }
+  }
+}
+
+.bio-section-wrapper {
+  height: 490px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-column-bio {
+    color: $gray;
+    padding: 20px 0px 30px 60px;
+    width: 420px;
+
+    p {
+      font-weight: 400;
+
+      span {
+        font-size: 1.4em;
+        font-weight: 600;
+        color: $teal;
+      }
+    }
+  }
+
+  .bio-spacer {
+    h3 {
+    font-size: 2.5em;
+    }
+
+    #bark {
+      position: absolute;
+      color: $black;
+      font-size: 2em;
+    }
+  }
+
+  .right-column-bio {
+    margin-top: 40px;
+    height: 450px;
+
+    .bisky-wrapper {
+      margin-right: 0;
+
+      img {
+        height: 450px;
+       }
+    }
+  }
+}
+
+.interests-wrapper {
+  height: 450px;
+  background-color: $pink;
+  display: flex;
+  justify-content: space-between;
+  
+  .clouds-wrapper {
+    .left-cloud-group {
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1302px, 50px);
+        
+        &:hover {
+          @include thoughts-hov($c-h-height, 1292px, 40px);
+        }
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1461px, 257px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1456px, 252px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1496px, 325px);
+
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1491px, 320px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1518px, 384px);
+
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1513px, 379px);
+        }
+      }
+    }
+
+    .middle-cloud-group {
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1200px, 347px);
+
+        &:hover {
+          @include thoughts-hov($c-h-height, 1190px, 337px);
+        }
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1372px, 530px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1367px, 525px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1420px, 580px);
+      
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1415px, 575px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1450px, 630px);
+      
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1445px, 625px);
+        }
+      }
+    }
+
+    .right-cloud-group {
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1232px, 680px);
+
+        &:hover {
+          @include thoughts-hov($c-h-height, 1222px, 670px);
+        }
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1415px, 780px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1410px, 775px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1460px, 830px);
+
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1455px, 825px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1485px, 880px);
+
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1480px, 875px);
+        }
+      }
+    }
+  }
+
+  .thinker-wrapper {
+    margin-top: 50;
+
+    img {
+      height: 400px;
+      margin-top: 50px;
+    }
+  }
+}
+
