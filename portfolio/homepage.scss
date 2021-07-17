@@ -21,12 +21,37 @@ $b3-h-height: 55px;
 $c-trans: 0.5s;
 $b-trans: 0.2s;
 
-@mixin fade_in($trans) {
+@mixin fade-in($trans) {
   opacity: 0;
     -moz-transition: opacity $trans;
     -webkit-transition: opacity $trans;
     -o-transition: opacity $trans;
     transition: opacity $trans;
+}
+
+@mixin cloud-text($top, $left) {
+  position: absolute;
+  color: #7e7d7d;
+  transition: $c-trans;
+  top: $top;
+  left: $left;
+  opacity: 0;
+  width: 300px;
+  height: 150px;
+  padding-left: 75px;
+  padding-top: 30px;
+}
+
+@mixin cloud-head {
+  font-family: $title;
+  font-size: 2em;
+  margin: 0;
+}
+
+@mixin cloud-li {
+  margin: 0;
+  font-family: $sans;
+  font-size: 1.1em;
 }
 
 @mixin thoughts-start($height, $trans, $top, $left) {
@@ -41,6 +66,18 @@ $b-trans: 0.2s;
   height: $height;
   top: $top;
   left: $left;
+}
+
+@mixin input {
+  background-color: $white;
+  border: 1.5px solid $gray;
+  border-radius: 3px;
+  box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  -webkit-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  -moz-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  cursor: text;
+  font-family: $sans;
+  padding: 2px 10px;
 }
 
 .hero-section {
@@ -75,15 +112,15 @@ $b-trans: 0.2s;
       }
 
       #job1 {
-        @include fade_in(0.75s);
+        @include fade-in(0.75s);
       }
 
       #job2 {
-        @include fade_in(1.5s);
+        @include fade-in(1.5s);
       }
 
       #job3 {
-        @include fade_in(3s);
+        @include fade-in(3s);
       }
     }
 
@@ -112,7 +149,7 @@ $b-trans: 0.2s;
 
   .left-column-bio {
     color: $gray;
-    padding: 20px 0px 30px 60px;
+    padding: 20px 0px 30px 80px;
     width: 420px;
 
     p {
@@ -160,80 +197,116 @@ $b-trans: 0.2s;
   
   .clouds-wrapper {
     .left-cloud-group {
+      .cloud-text {
+        @include cloud-text(1312px, 85px);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
+        }
+      }
       .cloud {
         @include thoughts-start($c-s-height, $c-trans, 1302px, 50px);
-        
-        &:hover {
-          @include thoughts-hov($c-h-height, 1292px, 40px);
-        }
       }
 
       .bubble1 {
-        @include thoughts-start($b1-s-height, $b-trans, 1461px, 257px);
+        @include thoughts-start($b1-s-height, $b-trans, 1471px, 257px);
 
         &:hover {
-          @include thoughts-hov($b1-h-height, 1456px, 252px);
+          @include thoughts-hov($b1-h-height, 1466px, 252px);
         }
       }
       
       .bubble2 {
-        @include thoughts-start($b2-s-height, $b-trans, 1496px, 325px);
+        @include thoughts-start($b2-s-height, $b-trans, 1506px, 325px);
 
         &:hover {
-          @include thoughts-hov($b2-h-height, 1491px, 320px);
+          @include thoughts-hov($b2-h-height, 1501px, 320px);
         }
       }
 
       .bubble3 {
-        @include thoughts-start($b3-s-height, $b-trans, 1518px, 384px);
+        @include thoughts-start($b3-s-height, $b-trans, 1528px, 384px);
 
         &:hover {
-          @include thoughts-hov($b3-h-height, 1513px, 379px);
+          @include thoughts-hov($b3-h-height, 1523px, 379px);
         }
       }
     }
 
     .middle-cloud-group {
-      .cloud {
-        @include thoughts-start($c-s-height, $c-trans, 1200px, 347px);
+      .cloud-text {
+        @include cloud-text(1210px, 372px);
 
         &:hover {
-          @include thoughts-hov($c-h-height, 1190px, 337px);
+          opacity: 1;
+        }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
         }
       }
 
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1200px, 347px);
+      }
+
       .bubble1 {
-        @include thoughts-start($b1-s-height, $b-trans, 1372px, 530px);
+        @include thoughts-start($b1-s-height, $b-trans, 1382px, 530px);
 
         &:hover {
-          @include thoughts-hov($b1-h-height, 1367px, 525px);
+          @include thoughts-hov($b1-h-height, 1377px, 525px);
         }
       }
       
       .bubble2 {
-        @include thoughts-start($b2-s-height, $b-trans, 1420px, 580px);
+        @include thoughts-start($b2-s-height, $b-trans, 1430px, 580px);
       
         &:hover {
-          @include thoughts-hov($b2-h-height, 1415px, 575px);
+          @include thoughts-hov($b2-h-height, 1425px, 575px);
         }
       }
 
       .bubble3 {
-        @include thoughts-start($b3-s-height, $b-trans, 1450px, 630px);
+        @include thoughts-start($b3-s-height, $b-trans, 1460px, 630px);
       
         &:hover {
-          @include thoughts-hov($b3-h-height, 1445px, 625px);
+          @include thoughts-hov($b3-h-height, 1455px, 625px);
         }
       }
     }
 
     .right-cloud-group {
-      .cloud {
-        @include thoughts-start($c-s-height, $c-trans, 1232px, 680px);
+      .cloud-text {
+        @include cloud-text(1232px, 675px);
 
         &:hover {
-          @include thoughts-hov($c-h-height, 1222px, 670px);
+          opacity: 1;
         }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
+        }
+      }
+
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1212px, 660px);
+        height: 220px;
       }
 
       .bubble1 {
@@ -245,18 +318,18 @@ $b-trans: 0.2s;
       }
       
       .bubble2 {
-        @include thoughts-start($b2-s-height, $b-trans, 1460px, 830px);
+        @include thoughts-start($b2-s-height, $b-trans, 1470px, 830px);
 
         &:hover {
-          @include thoughts-hov($b2-h-height, 1455px, 825px);
+          @include thoughts-hov($b2-h-height, 1465px, 825px);
         }
       }
 
       .bubble3 {
-        @include thoughts-start($b3-s-height, $b-trans, 1485px, 880px);
+        @include thoughts-start($b3-s-height, $b-trans, 1495px, 880px);
 
         &:hover {
-          @include thoughts-hov($b3-h-height, 1480px, 875px);
+          @include thoughts-hov($b3-h-height, 1490px, 875px);
         }
       }
     }
@@ -272,3 +345,60 @@ $b-trans: 0.2s;
   }
 }
 
+.homepage-contact {
+  height: 450px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100vw;
+  justify-items: center;
+  padding-left: 20px;
+
+  img {
+    position: absolute;
+    opacity: 0.5;
+    height: 550px;
+    top: 1670px;
+    left: 700px;
+    z-index: -1;
+  }
+
+  .top-contact-wrapper {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60vw;
+    height: 165px;
+
+    .left-contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        width: 75%;
+        height: 35px;
+        @include input;
+      }
+    }
+
+    .right-contact-wrapper {
+      h3 {
+        font-size: 2em;
+        color: $teal;
+      }
+    }
+  }
+
+  .bottom-contact-wrapper {
+    width: 60vw;
+    height: 200px;
+
+    textarea {
+      width: 75%;
+      height: 150px;
+      margin: 0;
+      @include input;
+      padding-top: 10px;
+    }
+  }
+}
