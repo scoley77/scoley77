@@ -68,16 +68,33 @@ $b-trans: 0.2s;
   left: $left;
 }
 
+@mixin drop-shadow {
+  box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  -webkit-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  -moz-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+}
+
 @mixin input {
   background-color: $white;
   border: 1.5px solid $gray;
   border-radius: 3px;
-  box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
-  -webkit-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
-  -moz-box-shadow: 11px 11px 21px -8px rgba(239,114,161,0.75);
+  @include drop-shadow;
   cursor: text;
   font-family: $sans;
   padding: 2px 10px;
+  font-size: 1.1em;
+}
+
+@mixin button {
+  color: $white;
+  background-color: $pink;
+  height: 50px;
+  width: 210px;
+  border: 1px solid $rare_pink;
+  border-radius: 5px;
+  font-family: $sans;
+  font-weight: 500;
+  font-size: 1.0em;
 }
 
 .hero-section {
@@ -128,15 +145,7 @@ $b-trans: 0.2s;
       margin-bottom: 40px;
 
       button {
-        color: $white;
-        background-color: $pink;
-        height: 50px;
-        width: 210px;
-        border: 1px solid $rare_pink;
-        border-radius: 5px;
-        font-family: $sans;
-        font-weight: 500;
-        font-size: 1.0em;
+        @include button;
       }
     }
   }
@@ -399,6 +408,39 @@ $b-trans: 0.2s;
       margin: 0;
       @include input;
       padding-top: 10px;
+    }
+
+    .contact-button {
+      width: 75%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        @include button;
+        @include drop-shadow;
+        height: 30px;
+        width: 120px;
+        font-size: 0.9em;
+        transition: $b-trans;
+        z-index: 1;
+
+        &:active {
+          box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -webkit-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -moz-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+        }
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 1.5em;
+        opacity: 0;
+        transition: $b-trans;
+        
+      }
     }
   }
 }
