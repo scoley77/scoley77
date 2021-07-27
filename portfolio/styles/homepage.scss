@@ -1,0 +1,359 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.hero-section {
+  height: 450px;
+  width: 100%;
+  background-color: $teal;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+
+  .hero-left-column {
+    iframe {
+    height: 450px;
+    }
+  }
+
+  .hero-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -20px;
+
+    .jobs-wrapper {
+      margin-top: 5px;
+
+      h2 {
+        color: $white;
+        font-family: $title;
+        font-weight: 700;
+        font-size: 2.7em;
+      }
+
+      #job1 {
+        @include fade-in(0.75s);
+      }
+
+      #job2 {
+        @include fade-in(1.5s);
+      }
+
+      #job3 {
+        @include fade-in(3s);
+      }
+    }
+
+    .jobs-button {
+      margin-bottom: 40px;
+
+      button {
+        @include button;
+      }
+    }
+  }
+}
+
+.bio-section-wrapper {
+  height: 490px;
+  display: flex;
+  justify-content: space-between;
+
+  .left-column-bio {
+    color: $gray;
+    padding: 20px 0px 30px 80px;
+    width: 420px;
+
+    p {
+      font-weight: 400;
+
+      span {
+        font-size: 1.4em;
+        font-weight: 600;
+        color: $teal;
+      }
+    }
+  }
+
+  .bio-spacer {
+    h3 {
+    font-size: 2.5em;
+    }
+
+    #bark {
+      position: absolute;
+      color: $black;
+      font-size: 2em;
+    }
+  }
+
+  .right-column-bio {
+    margin-top: 40px;
+    height: 450px;
+
+    .bisky-wrapper {
+      margin-right: 0;
+      cursor: pointer;
+
+      img {
+        height: 450px;
+        
+       }
+    }
+  }
+}
+
+.interests-wrapper {
+  height: 450px;
+  background-color: $pink;
+  display: flex;
+  justify-content: space-between;
+  
+  .clouds-wrapper {
+    .left-cloud-group {
+      .cloud-text {
+        @include cloud-text(1312px, 85px);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
+        }
+      }
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1302px, 50px);
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1471px, 257px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1466px, 252px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1506px, 325px);
+
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1501px, 320px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1528px, 384px);
+
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1523px, 379px);
+        }
+      }
+    }
+
+    .middle-cloud-group {
+      .cloud-text {
+        @include cloud-text(1210px, 372px);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
+        }
+      }
+
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1200px, 347px);
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1382px, 530px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1377px, 525px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1430px, 580px);
+      
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1425px, 575px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1460px, 630px);
+      
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1455px, 625px);
+        }
+      }
+    }
+
+    .right-cloud-group {
+      .cloud-text {
+        @include cloud-text(1232px, 675px);
+
+        &:hover {
+          opacity: 1;
+        }
+
+        h3 {
+          @include cloud-head;
+        }
+
+        ul{
+          @include cloud-li;
+        }
+      }
+
+      .cloud {
+        @include thoughts-start($c-s-height, $c-trans, 1212px, 660px);
+        height: 220px;
+      }
+
+      .bubble1 {
+        @include thoughts-start($b1-s-height, $b-trans, 1415px, 780px);
+
+        &:hover {
+          @include thoughts-hov($b1-h-height, 1410px, 775px);
+        }
+      }
+      
+      .bubble2 {
+        @include thoughts-start($b2-s-height, $b-trans, 1470px, 830px);
+
+        &:hover {
+          @include thoughts-hov($b2-h-height, 1465px, 825px);
+        }
+      }
+
+      .bubble3 {
+        @include thoughts-start($b3-s-height, $b-trans, 1495px, 880px);
+
+        &:hover {
+          @include thoughts-hov($b3-h-height, 1490px, 875px);
+        }
+      }
+    }
+  }
+
+  .thinker-wrapper {
+    margin-top: 50;
+
+    img {
+      height: 400px;
+      margin-top: 50px;
+    }
+  }
+}
+
+.homepage-contact {
+  height: 550px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  padding-left: 20px;
+
+  img {
+    position: absolute;
+    opacity: 0.5;
+    height: 500px;
+    top: 1670px;
+    left: 700px;
+    z-index: -1;
+  }
+
+  .top-contact-wrapper {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60vw;
+    height: 165px;
+
+    .left-contact-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      input {
+        width: 75%;
+        height: 35px;
+        @include input;
+      }
+    }
+
+    .right-contact-wrapper {
+      h3 {
+        font-size: 2em;
+        color: $teal;
+      }
+    }
+  }
+
+  .bottom-contact-wrapper {
+    width: 60vw;
+    height: 200px;
+    margin-bottom: 50px;
+    margin-top: -10px;
+
+    textarea {
+      width: 75%;
+      height: 150px;
+      margin: 0;
+      @include input;
+      padding-top: 10px;
+
+      &:focus {
+        @include active-input;
+      }
+    }
+
+    .contact-button {
+      width: 75%;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: left;
+      padding-top: 10px;
+
+      button {
+        @include button;
+        @include drop-shadow;
+        height: 30px;
+        width: 120px;
+        font-size: 0.9em;
+        transition: $b-trans;
+        z-index: 1;
+
+        &:active {
+          box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -webkit-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -moz-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+        }
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 1.5em;
+        opacity: 0;
+        transition: $b-trans;
+        
+      }
+    }
+  }
+}

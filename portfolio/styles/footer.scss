@@ -1,0 +1,35 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.footer-wrapper {
+  height: 200px;
+  background-color: $teal;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+  
+  .footer-nav {
+    width: 55vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: $c-trans;
+      text-align: center;
+
+      &:hover {
+        letter-spacing: 2px;
+      }
+    }
+
+    img {
+      height: 150px;
+      margin: 0;
+    }
+  }
+}

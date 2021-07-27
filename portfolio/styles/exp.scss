@@ -1,0 +1,273 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.profile-section {
+  height: 450px;
+  padding-top: 30px;
+
+  .status-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .status-info {
+      h1 {
+        font-family: $sans;
+        color: $gray;
+        font-size: 3.5em;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      h5 {
+        font-size: 1.3em;
+        color: $gray;
+        margin: 0px 30px 0px 0px;
+        text-align: right;
+      }
+    }
+
+    .status-bars-wrapper {
+      margin-top: 20px;
+      padding-left: 10px;
+
+      .bar-slant {
+        background-color: $white;
+        border-right: 2px solid $gray;
+        transform: skewX(-25deg);
+        height: 66px;
+        width: 40px;
+        margin-bottom: -66px;
+        margin-left: -15px;
+      }
+
+      .bar-top {
+        border: 2px solid $gray;
+        width: 600px;
+        height: 30px;
+        background-color: transparent;
+
+        .inside-top {
+          background-color: $pink;
+          width: 95%;
+          height: 30px;
+
+          p {
+            color: $white;
+            text-align: right;
+            margin: 0;
+            font-size: 0.8em;
+            padding: 7px 20px 0px 0px;
+          }
+        }
+      }
+
+      .bar-bottom {
+        border: 2px solid $gray;
+        width: 600px;
+        height: 30px;
+        background-color: transparent;
+        border-top: transparent;
+
+        .inside-bottom {
+          background-color: $teal;
+          width: 30%;
+          height: 30px;
+        }
+
+        p {
+          color: $gray;
+          text-align: left;
+          margin: -25px 0px 0px 33%;
+          font-size: 0.8em;
+          padding: 2px 20px 0px 0px;
+        }
+      }
+    }
+  }
+
+  .moveset-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+
+    .left-moveset {
+      width: 60%;
+      height: 300px;
+
+      .head-wrapper {
+        display: flex;
+        justify-content: left;
+        margin-left: 15%;
+        margin-top: 20px;
+
+        h1 {
+          font-size: 3rem;
+          color: $teal;
+        }
+
+        h5 {
+          font-size: 1.2em;
+          color: $gray;
+          padding: 30px 0px 0px 15px;
+        }
+      }
+
+      .lists-wrapper {
+        display: flex;
+        margin-left: 20%;
+        margin-top: -15px;
+
+        .list {
+          color: $gray;
+          font-size: 1.3em;
+          padding: 0px 30px;
+
+          ul {
+            list-style: none;
+
+            li {
+              padding: 5px 0px;
+              &::before {
+                content: "\2665"; 
+                color: $pink; 
+                display: inline-block; 
+                width: 1.7em; 
+                margin-left: -1em; 
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right-moveset {
+      width: 27%;
+      height: 300px;
+
+      img {
+        position: absolute;
+        top: 400px;
+        left: 750px;
+        height: 400px;
+      }
+
+      h2 {
+        font-size: 3.8em;
+        position: absolute;
+        top: 455px;
+        left: 940px;
+
+        a {
+          text-decoration: none;
+          color: $pink;
+        }
+      }
+    }
+  }
+}
+
+.training-section {
+  height: 280px;
+  background-color: rgba($gray, 0.3);
+  
+
+  .train-heading {
+    h1 {
+      text-align: right;
+      padding: 65px 980px 0px 0px;
+      color: $teal;
+      font-size: 3rem;
+      margin-bottom: -60px;
+    }
+  }
+
+  .cert {
+    text-align: right;
+    margin: -73px 580px 65px 0px;
+    padding: 15px 0px;
+    
+
+    h4 {
+      margin: 0;
+      font-family: $sans;
+      color: $gray;
+      font-weight: 500;
+      padding: 10px 40px;
+    }
+
+    h3 {
+      margin: 0;
+      font-family: $sans;
+      color: $teal;
+      font-weight: 700
+    }
+  }
+}
+
+.experience-section {
+  height: 470px;
+  padding-top: 25px;
+
+  .exp-head {
+    margin-left: 15%;
+
+    h1 {
+      font-size: 3.0rem;
+      color: $teal;
+    }
+  }
+
+  .work-columns {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 100px;
+    padding-top: 20px;
+
+    .col {
+      width: 20%;
+
+      h5 {
+        font-size: 1.5em;
+        font-family: $sans;
+        color: $pink;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      h6 {
+        font-size: 1.2em;
+        margin: 0;
+        color: $gray;
+      }
+
+      p {
+        color: $gray;
+        font-weight: 500;
+      }
+    }
+
+    .col-bar {
+      background-color: $pink;
+      height: 200px;
+      width: 3px;
+      border-radius: 3px;
+    }
+  }
+
+  .exp-foot {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    h3 {
+      font-size: 1.5em;
+
+      a {
+        color: $teal;
+        text-decoration: none;
+      }
+    }
+  }
+}

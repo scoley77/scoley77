@@ -1,0 +1,128 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.nav-wrapper {
+  background-color: $teal;
+  font-family: 'Raleway', sans-serif;
+  color: $white;
+  height: 220px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .brand-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 30%;
+
+    img {
+      height: 150px;
+      margin-top: 20px;
+    }
+
+    .dropdown-wrap {
+      visibility: hidden;
+    }
+
+    h1 {
+      font-family: 'Amatic SC', cursive;
+      font-size: 2.5em;
+    }
+  }
+  
+  .meta-links-wrap {
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 30px;
+    margin-top: -60px;
+    padding-bottom: 10px;
+
+    .meta-link {
+
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: $b-trans;
+
+        &:hover {
+          font-weight: 700;
+        }   
+        
+      }
+    }
+  }
+}
+
+/* Media Queries and Dropdown Styles */
+@media (max-width: 48em) {
+  .nav-wrapper {
+    .brand-wrap {
+      order: 2;
+      flex: auto;
+      justify-content: flex-start;
+      margin: 0;
+    }
+
+    .meta-links-wrap {
+      visibility: hidden;
+      order: 3;
+      flex: none;
+    }
+
+    .dropdown-wrap {
+      align-self: flex-start;
+      visibility: visible;
+      order: 1;
+      flex: initial;
+      margin: 0px;
+
+      .dropdown-btn {
+        padding: 19.5px;
+        font-size: 26px;
+        margin-left: 42px;
+        cursor: pointer;
+        text-decoration: none;
+        border: none;
+        background-color: transparent;
+
+        i {
+          color: darkcyan;
+        }
+      }
+
+      .dropdown-menu {
+        visibility: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #da84a0;
+        width: 50vw;
+        height: 220px;
+        margin: 0;
+
+        .drop-link {
+          padding: 22px 42px;
+          font-size: 24px;
+          height: 100%;
+
+          &:hover {
+            background-color: #86264e;
+          }
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
