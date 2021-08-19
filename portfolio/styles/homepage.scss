@@ -49,7 +49,7 @@
       margin-bottom: 40px;
 
       button {
-        @include button;
+        @include button-push;
       }
     }
   }
@@ -277,68 +277,77 @@
     z-index: -1;
   }
 
-  .top-contact-wrapper {
-    padding: 50px;
+  form {
+    order: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 60vw;
-    height: 165px;
+    grid-template-columns: 1fr;
+    width: 50%;
+    padding-right: -150px;
 
-    .left-contact-wrapper {
+    .input_ {
+      width: 50%;
+      border: none;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      align-items: left;
+
+      label {
+        @include form-label;
+      }
 
       input {
-        width: 75%;
-        height: 35px;
         @include input;
+        width: 100%;
+        height: 45px;
+        order: 2;
+
+        &:focus {
+          @include active-input;
+        }
+
+        &:focus + label {
+          @include label-change;
+        }
       }
     }
 
-    .right-contact-wrapper {
-      h3 {
-        font-size: 2em;
-        color: $teal;
+    .big-text {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
+      label {
+        @include form-label;
+      }
+
+      textarea {
+        @include input;
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        order: 2;
+
+        &:focus {
+          @include active-input;
+        }
+
+        &:focus ~ label {
+          @include label-change;
+        }
       }
     }
-  }
 
-  .bottom-contact-wrapper {
-    width: 60vw;
-    height: 200px;
-    margin-bottom: 50px;
-    margin-top: -10px;
-
-    textarea {
-      width: 75%;
-      height: 150px;
-      margin: 0;
-      @include input;
-      padding-top: 10px;
-
-      &:focus {
-        @include active-input;
-      }
-    }
-
-    .contact-button {
-      width: 75%;
-      height: 50px;
+    .button-div {
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: left;
-      padding-top: 10px;
+      justify-content: center;
 
       button {
-        @include button;
-        @include drop-shadow;
-        height: 30px;
-        width: 120px;
-        font-size: 0.9em;
-        transition: $b-trans;
-        z-index: 1;
+        @include button-push;
+        margin-top: -50px;
 
         &:active {
           box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
@@ -349,10 +358,12 @@
 
       h3 {
         position: absolute;
-        font-size: 1.5em;
+        font-size: 2em;
+        color: $teal;
         opacity: 0;
         transition: $b-trans;
-        
+        margin-top: -20px;
+        z-index: -1;
       }
     }
   }

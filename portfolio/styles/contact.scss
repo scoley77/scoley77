@@ -1,0 +1,146 @@
+@import 'variables';
+@import 'mixins';
+
+.contact-wrap {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 100px 0 30px 0;
+  margin: 0px 30px;
+
+  .big-img {
+    
+    img {
+      height: 550px;
+      position: absolute;
+      left: 450px;
+      top: 450px;
+      z-index: -1;
+    }
+  }
+
+  .meta-contact-data {
+    margin-top: 10px;
+    margin-left: -50px;
+    width: 25%;
+    order: 2;
+
+    h2 {
+      font-size: 2.5em;
+      margin-top: -10px;
+    }
+
+    .media-icons {
+      width: 70%;
+      height: 3.5em;
+      margin: 10px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        
+        i {
+          color: $teal;
+          font-size: 2.5em;
+          margin: 0px 20px;
+
+          &:hover {
+            font-size: 3em;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    order: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    padding-right: -150px;
+
+    .input_ {
+      width: 50%;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
+      label {
+        @include form-label;
+      }
+
+      input {
+        @include input;
+        width: 100%;
+        height: 45px;
+        order: 2;
+
+        &:focus {
+          @include active-input;
+        }
+
+        &:focus + label {
+          @include label-change;
+        }
+      }
+    }
+
+    .big-text {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+
+      label {
+        @include form-label;
+      }
+
+      textarea {
+        @include input;
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        order: 2;
+
+        &:focus {
+          @include active-input;
+        }
+
+        &:focus ~ label {
+          @include label-change;
+        }
+      }
+    }
+
+    .button-div {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        @include button-push;
+        margin-top: -50px;
+
+        &:active {
+          box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -webkit-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+          -moz-box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);
+        }
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 2em;
+        color: $teal;
+        opacity: 0;
+        transition: $b-trans;
+        margin-top: -20px;
+        z-index: -1;
+      }
+    }
+  }
+}

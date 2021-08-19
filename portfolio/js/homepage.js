@@ -30,10 +30,6 @@ var barkClick = function() {
 };
 bisk.addEventListener('click', barkClick)
 
-var msg = document.getElementById('sub-message');
-var subBtn = document.getElementById('con-sub');
-function contactMessage() {
-  
-  subBtn.style.opacity = 0;
-  msg.style.opacity = 1;
+document.getElementById("port-btn").onclick = function () {
+  location.href = "portfolio.html";
 };

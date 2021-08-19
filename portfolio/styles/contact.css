@@ -1,0 +1,184 @@
+.contact-wrap {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 100px 0 30px 0;
+  margin: 0px 30px;
+}
+.contact-wrap .big-img img {
+  height: 550px;
+  position: absolute;
+  left: 450px;
+  top: 450px;
+  z-index: -1;
+}
+.contact-wrap .meta-contact-data {
+  margin-top: 10px;
+  margin-left: -50px;
+  width: 25%;
+  order: 2;
+}
+.contact-wrap .meta-contact-data h2 {
+  font-size: 2.5em;
+  margin-top: -10px;
+}
+.contact-wrap .meta-contact-data .media-icons {
+  width: 70%;
+  height: 3.5em;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-wrap .meta-contact-data .media-icons a i {
+  color: #0d687e;
+  font-size: 2.5em;
+  margin: 0px 20px;
+}
+.contact-wrap .meta-contact-data .media-icons a i:hover {
+  font-size: 3em;
+}
+.contact-wrap form {
+  order: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50%;
+  padding-right: -150px;
+}
+.contact-wrap form .input_ {
+  width: 50%;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contact-wrap form .input_ label {
+  order: 1;
+  color: #0d687e;
+  font-size: 1.2em;
+  margin: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+.contact-wrap form .input_ input {
+  background-color: #ffffff;
+  border: 1.5px solid #7e7d7d;
+  border-radius: 3px;
+  box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  -webkit-box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  -moz-box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  cursor: text;
+  font-family: "Raleway", sans-serif;
+  padding: 2px 10px;
+  font-size: 1.1em;
+  width: 100%;
+  height: 45px;
+  order: 2;
+}
+.contact-wrap form .input_ input:focus {
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #7e7d7d;
+  border-radius: 0px;
+}
+.contact-wrap form .input_ input:focus::-moz-placeholder {
+  color: transparent;
+}
+.contact-wrap form .input_ input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contact-wrap form .input_ input:focus::placeholder {
+  color: transparent;
+}
+.contact-wrap form .input_ input:focus + label {
+  visibility: visible;
+  transform: translateY(-0.5rem);
+}
+.contact-wrap form .big-text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.contact-wrap form .big-text label {
+  order: 1;
+  color: #0d687e;
+  font-size: 1.2em;
+  margin: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+  visibility: hidden;
+}
+.contact-wrap form .big-text textarea {
+  background-color: #ffffff;
+  border: 1.5px solid #7e7d7d;
+  border-radius: 3px;
+  box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  -webkit-box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  -moz-box-shadow: 11px 11px 21px -8px rgba(239, 114, 161, 0.75);
+  cursor: text;
+  font-family: "Raleway", sans-serif;
+  padding: 2px 10px;
+  font-size: 1.1em;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  order: 2;
+}
+.contact-wrap form .big-text textarea:focus {
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #7e7d7d;
+  border-radius: 0px;
+}
+.contact-wrap form .big-text textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+.contact-wrap form .big-text textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.contact-wrap form .big-text textarea:focus::placeholder {
+  color: transparent;
+}
+.contact-wrap form .big-text textarea:focus ~ label {
+  visibility: visible;
+  transform: translateY(-0.5rem);
+}
+.contact-wrap form .button-div {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-wrap form .button-div button {
+  color: #ffffff;
+  background-color: #ef72a1;
+  height: 50px;
+  width: 210px;
+  border: 1px solid #cc608a;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: -50px;
+}
+.contact-wrap form .button-div button:active {
+  box-shadow: 1px 0px 29px 6px rgba(239, 114, 161, 0.76);
+  -webkit-box-shadow: 1px 0px 29px 6px rgba(239, 114, 161, 0.76);
+  -moz-box-shadow: 1px 0px 29px 6px rgba(239, 114, 161, 0.76);
+}
+.contact-wrap form .button-div h3 {
+  position: absolute;
+  font-size: 2em;
+  color: #0d687e;
+  opacity: 0;
+  transition: 0.2s;
+  margin-top: -20px;
+  z-index: -1;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,21 +1,14 @@
+@charset "UTF-8";
 .profile-section {
   height: 450px;
   padding-top: 30px;
 }
-
 .profile-section .status-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
-
 .profile-section .status-bar .status-info h1 {
   font-family: "Raleway", sans-serif;
   color: #7e7d7d;
@@ -23,43 +16,36 @@
   font-weight: 400;
   margin: 0;
 }
-
 .profile-section .status-bar .status-info h5 {
   font-size: 1.3em;
   color: #7e7d7d;
   margin: 0px 30px 0px 0px;
   text-align: right;
 }
-
 .profile-section .status-bar .status-bars-wrapper {
   margin-top: 20px;
   padding-left: 10px;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-slant {
   background-color: #ffffff;
   border-right: 2px solid #7e7d7d;
-  -webkit-transform: skewX(-25deg);
-          transform: skewX(-25deg);
+  transform: skewX(-25deg);
   height: 66px;
   width: 40px;
   margin-bottom: -66px;
   margin-left: -15px;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-top {
   border: 2px solid #7e7d7d;
   width: 600px;
   height: 30px;
   background-color: transparent;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-top .inside-top {
   background-color: #ef72a1;
   width: 95%;
   height: 30px;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-top .inside-top p {
   color: #ffffff;
   text-align: right;
@@ -67,7 +53,6 @@
   font-size: 0.8em;
   padding: 7px 20px 0px 0px;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-bottom {
   border: 2px solid #7e7d7d;
   width: 600px;
@@ -75,13 +60,11 @@
   background-color: transparent;
   border-top: transparent;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-bottom .inside-bottom {
   background-color: #0d687e;
   width: 30%;
   height: 30px;
 }
-
 .profile-section .status-bar .status-bars-wrapper .bar-bottom p {
   color: #7e7d7d;
   text-align: left;
@@ -89,93 +72,69 @@
   font-size: 0.8em;
   padding: 2px 20px 0px 0px;
 }
-
 .profile-section .moveset-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   height: 250px;
 }
-
 .profile-section .moveset-wrapper .left-moveset {
   width: 60%;
   height: 300px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .head-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
   margin-left: 15%;
   margin-top: 20px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .head-wrapper h1 {
   font-size: 3rem;
   color: #0d687e;
 }
-
 .profile-section .moveset-wrapper .left-moveset .head-wrapper h5 {
   font-size: 1.2em;
   color: #7e7d7d;
   padding: 30px 0px 0px 15px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .lists-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: 20%;
   margin-top: -15px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .lists-wrapper .list {
   color: #7e7d7d;
   font-size: 1.3em;
   padding: 0px 30px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .lists-wrapper .list ul {
   list-style: none;
 }
-
 .profile-section .moveset-wrapper .left-moveset .lists-wrapper .list ul li {
   padding: 5px 0px;
 }
-
 .profile-section .moveset-wrapper .left-moveset .lists-wrapper .list ul li::before {
-  content: "\2665";
+  content: "♥";
   color: #ef72a1;
   display: inline-block;
   width: 1.7em;
   margin-left: -1em;
 }
-
 .profile-section .moveset-wrapper .right-moveset {
   width: 27%;
   height: 300px;
 }
-
 .profile-section .moveset-wrapper .right-moveset img {
   position: absolute;
   top: 400px;
   left: 750px;
   height: 400px;
 }
-
 .profile-section .moveset-wrapper .right-moveset h2 {
   font-size: 3.8em;
   position: absolute;
   top: 455px;
   left: 940px;
 }
-
 .profile-section .moveset-wrapper .right-moveset h2 a {
   text-decoration: none;
   color: #ef72a1;
@@ -185,7 +144,6 @@
   height: 280px;
   background-color: rgba(126, 125, 125, 0.3);
 }
-
 .training-section .train-heading h1 {
   text-align: right;
   padding: 65px 980px 0px 0px;
@@ -193,13 +151,11 @@
   font-size: 3rem;
   margin-bottom: -60px;
 }
-
 .training-section .cert {
   text-align: right;
   margin: -73px 580px 65px 0px;
   padding: 15px 0px;
 }
-
 .training-section .cert h4 {
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -207,7 +163,6 @@
   font-weight: 500;
   padding: 10px 40px;
 }
-
 .training-section .cert h3 {
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -219,30 +174,22 @@
   height: 470px;
   padding-top: 25px;
 }
-
 .experience-section .exp-head {
   margin-left: 15%;
 }
-
 .experience-section .exp-head h1 {
-  font-size: 3.0rem;
+  font-size: 3rem;
   color: #0d687e;
 }
-
 .experience-section .work-columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin: 0px 100px;
   padding-top: 20px;
 }
-
 .experience-section .work-columns .col {
   width: 20%;
 }
-
 .experience-section .work-columns .col h5 {
   font-size: 1.5em;
   font-family: "Raleway", sans-serif;
@@ -250,41 +197,30 @@
   margin: 0;
   font-weight: 500;
 }
-
 .experience-section .work-columns .col h6 {
   font-size: 1.2em;
   margin: 0;
   color: #7e7d7d;
 }
-
 .experience-section .work-columns .col p {
   color: #7e7d7d;
   font-weight: 500;
 }
-
 .experience-section .work-columns .col-bar {
   background-color: #ef72a1;
   height: 200px;
   width: 3px;
   border-radius: 3px;
 }
-
 .experience-section .exp-foot {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-top: 30px;
 }
-
 .experience-section .exp-foot h3 {
   font-size: 1.5em;
 }
-
 .experience-section .exp-foot h3 a {
   color: #0d687e;
   text-decoration: none;
-}
-/*# sourceMappingURL=exp.css.map */
+}/*# sourceMappingURL=exp.css.map */
