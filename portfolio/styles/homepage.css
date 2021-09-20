@@ -311,25 +311,31 @@
 
 .homepage-contact {
   height: 550px;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-content: center;
-  padding-left: 20px;
+  padding: 100px 0 30px 0;
+  margin: 0px 30px;
 }
-.homepage-contact img {
+.homepage-contact .big-img h2 {
   position: absolute;
-  opacity: 0.5;
-  height: 500px;
-  top: 1670px;
-  left: 700px;
+  left: 870px;
+  color: #0d687e;
+  font-size: 2.5em;
+}
+.homepage-contact .big-img img {
+  height: 425px;
+  overflow: hidden;
+  position: absolute;
+  left: 450px;
+  top: 1750px;
   z-index: -1;
 }
 .homepage-contact form {
   order: 1;
   display: grid;
   grid-template-columns: 1fr;
-  width: 50%;
+  width: 60%;
   padding-right: -150px;
 }
 .homepage-contact form .input_ {
@@ -453,7 +459,6 @@
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1em;
-  margin-top: -50px;
 }
 .homepage-contact form .button-div button:active {
   box-shadow: 1px 0px 29px 6px rgba(239, 114, 161, 0.76);

@@ -262,26 +262,36 @@
 
 .homepage-contact {
   height: 550px;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-content: center;
-  padding-left: 20px;
+  padding: 100px 0 30px 0;
+  margin: 0px 30px;
 
-  img {
-    position: absolute;
-    opacity: 0.5;
-    height: 500px;
-    top: 1670px;
-    left: 700px;
-    z-index: -1;
+  .big-img {
+
+    h2 {
+      position: absolute;
+      left: 870px;
+      color: $teal;
+      font-size: 2.5em;
+    }
+    
+    img {
+      height: 425px;
+      overflow: hidden;
+      position: absolute;
+      left: 450px;
+      top: 1750px;
+      z-index: -1;
+    }
   }
 
   form {
     order: 1;
     display: grid;
     grid-template-columns: 1fr;
-    width: 50%;
+    width: 60%;
     padding-right: -150px;
 
     .input_ {
@@ -347,7 +357,7 @@
 
       button {
         @include button-push;
-        margin-top: -50px;
+        margin-top: 20px;
 
         &:active {
           box-shadow: 1px 0px 29px 6px rgba(239,114,161,0.76);

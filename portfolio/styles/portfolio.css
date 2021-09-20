@@ -40,6 +40,7 @@
   position: absolute;
   top: 330px;
   left: 680px;
+  overflow: hidden;
 }
 .portfolio-wrapper .left-column-port #num1 img {
   z-index: initial;
