@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S. Coley Tech Portfolio Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="styles/common.css" rel="stylesheet">
+  <link href="styles/nav.css" rel="stylesheet">
+  <link href="styles/portfolio.css" rel="stylesheet">
+  <link href="styles/footer.css" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-wrapper">
+    <div class="brand-wrap">
+      <div class="logo-wrapper-nav">
+        <img src="images/logos_logo_white.png" alt="S. Coley Tech logo">
+      </div>
+      <div class="dropdown-wrap">
+        <button class="dropdown-btn" onclick="dropListShow()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="dropdown" class="dropdown-menu">
+          <div class="drop-link">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="drop-link">
+            <a href="experience.html">Status</a>
+          </div>
+          <div class="drop-link">
+            <a href="portfolio.html">Abilities</a>
+          </div>
+          <div class="drop-link">
+            <a href="contact.html">Talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="name-wrap">
+        <h1>S. Coley Tech</h1>
+      </div>
+    </div>
+    <div class="meta-links-wrap">
+      <div class="meta-link">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="meta-link">
+        <a href="experience.html">Status</a>
+      </div>
+      <div class="meta-link">
+        <a href="portfolio.html">Abilities</a>
+      </div>
+      <div class="meta-link">
+        <a href="contact.html">Talk</a>
+      </div>
+    </div>
+  </div>
+  <div class="portfolio-wrapper">
+    <div class="left-column-port">
+      <div id="num1" onmouseover="port1()" class="duo-wrapper">
+        <div class="link-wrap">
+          <h2><a target="_blank" href="https://sleepy-yalow-5af790.netlify.app/">Pinnacle Plan, PLC</a></h2>
+          <h5><a target="_blank" href="https://github.com/scoley77/PinnaclePlan">GitHub</a></h5>
+        </div>
+        <div class="img-wrap">
+          <img id="img1" src="images/Screenshot-pinnacle.png" alt="Screenshot of Pinnacle Plan, PLC's website">
+        </div>
+      </div>
+      <div id="num2" onmouseover="port2()" class="duo-wrapper">
+        <div class="link-wrap">
+          <h2><a target="_blank" href="https://vigilant-jang-690cc8.netlify.app/index.html">Devcamp Fries, sample site</a></h2>
+          <h5><a target="_blank" href="https://github.com/scoley77/Devcamp-Fries">GitHub</a></h5>
+        </div>
+        <div class="img-wrap">
+          <img id="img2" src="images/Screenshot-devcamp.png" alt="Devcamp Fries">
+        </div>
+      </div>
+      <div id="num3" onmouseover="port3()" class="duo-wrapper">
+        <div class="link-wrap">
+          <h2><a target="_blank" href="https://replit.com/@scoley77/ReplitFun">Replit Fun</a></h2>
+          <h5><a target="_blank" href="https://github.com/scoley77/Replit_Fun">Choose from 4 games I made just for fun!</a></h5>
+        </div>
+        <div class="img-wrap">
+          <img id="img3" src="images/Screenshot-waffles.png" alt="Screenshot of small virtual arcade in action">
+        </div>
+      </div>
+      <div id="num4" onmouseover="port4()" class="duo-wrapper">
+        <div class="link-wrap">
+          <h2><a target="_blank" href="https://replit.com/@scoley77/AutoPacker">Sara's AutoPacker</a></h2>
+          <h5><a target="_blank" href="#">Don't forget anything on your next vacation!</a></h5>
+        </div>
+        <div class="img-wrap">
+          <img id="img4" src="images/Screenshot-autopacker.png" alt="Screenshot of a sample packing list">
+        </div>
+      </div>
+      <div id="num5" onmouseover="port5()" class="duo-wrapper">
+        <div class="link-wrap">
+          <h2><a target="_blank" href="https://ecstatic-spence-3ce05d.netlify.app/">JavaScript Diner</a></h2>
+          <h5><a target="_blank" href="https://github.com/scoley77/JSDiner">Timeouts and prompt windows for a smooth user experience</a></h5>
+        </div>
+        <div class="img-wrap">
+          <img id="img5" src="images/Screenshot-diner.png" alt="Screenshot of the JS Diner in action">
+        </div>
+      </div>
+    </div>
+    <div class="right-column-spacer"></div>
+  </div>
+  <div class="footer-wrapper">
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <img src="images/logos_logo_white.png" alt="S. Coley Tech logo">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/2823cd3b1b.js" crossorigin="anonymous"></script>
+  <script src="js/portfolio.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

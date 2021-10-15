@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S. Coley Tech Portfolio Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Raleway:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link href="styles/common.css" rel="stylesheet">
+  <link href="styles/home-nav.css" rel="stylesheet">
+  <link href="styles/homepage.css" rel="stylesheet">
+  <link href="styles/footer.css" rel="stylesheet">
+</head>
+<body>
+  <div class="nav-wrapper">
+    <div class="top-nav-wrapper">
+      <div class="dropdown-wrap">
+        <button class="dropdown-btn" onclick="dropListShow()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div id="dropdown" class="dropdown-menu">
+          <div class="drop-link">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="drop-link">
+            <a href="experience.html">Status</a>
+          </div>
+          <div class="drop-link">
+            <a href="portfolio.html">Abilities</a>
+          </div>
+          <div class="drop-link">
+            <a href="contact.html">Talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="brand-wrap">
+        <div class="logo-wrapper-nav">
+          <img src="images/logos_text_logo_color.png" alt="S. Coley Tech logo">
+        </div>
+        <div class="meta-links-wrap">
+          <div class="meta-link">
+            <a href="index.html">Home</a>
+          </div>
+          <div class="meta-link">
+            <a href="experience.html">Status</a>
+          </div>
+          <div class="meta-link">
+            <a href="portfolio.html">Abilities</a>
+          </div>
+          <div class="meta-link">
+            <a href="contact.html">Talk</a>
+          </div>
+        </div>
+      </div>
+      <div class="heart-wrapper">
+        <img src="images/heart.png" alt="Pixel Heart">
+        <img src="images/heart.png" alt="Pixel Heart">
+        <img src="images/heart.png" alt="Pixel Heart">
+      </div>
+    </div>
+  </div>
+  <div class="hero-section">
+    <div class="hero-left-column">
+      <iframe src="https://giphy.com/embed/7NoNw4pMNTvgc" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+    <div class="hero-right-column">
+      <div class="jobs-wrapper">
+        <h2 class='load' id='job1'>Software Engineering</h2>
+        <h2 class='load' id='job2'>Web Development</h2>
+        <h2 class='load' id='job3'>UI/UX</h2>
+      </div>
+      <div class="jobs-button">
+        <button id="port-btn">Check out my Portfolio!</button>
+      </div>
+    </div>
+  </div>
+  <div class="bio-section-wrapper">
+    <div class="left-column-bio">
+      <p><span>Hello! I'm Sara!</span> I'm an Arizona native, living in Idaho, but willing to 
+        move or work remote. I love to travel, watch anime, and play with all four of my kids! 
+        My idea of a perfect day would be packing a picnic (cheese and cracker, with fresh fruit, 
+        and cinnamon Teddy Grahams), and heading out for a hike with all of my favorite people! *Bonus points 
+        if the hike has a waterfall to play in* </br></br>My husband and I have been married for 
+        7 years. We have 2 beautiful daughters, 1 adorable boy, and a sweet, dorky doggo named Biscuit, whom we rescued 
+        recently. We couldn't be happier with our beautiful family! </br></br>I graduated from Brigham Young University - Idaho 
+        with a Bachelor's in University Studies in 2021. What does that mean? It means 
+        I had so many credits from a wide range of classes, so they eventually just wanted to get rid of me! 
+        My university experience has included programming, fine art, chemistry, calculus, Japanese, and much more. 
+        I am a Jack-of-all-trades, but I choose to be a master of coding and watercolor painting.
+      </p>
+    </div>
+    <div class="bio-spacer">
+      <h3>Say 'Hi' to Biscuit!</h3>
+      <h5 id="bark"> </h5>
+    </div>
+    <div class="right-column-bio">
+      <div class="bisky-wrapper">
+        <img id="Biscuit" title="Click!" src="images/bisky.png" alt="Happy Doggo, Bisky">
+      </div>
+    </div>
+  </div>
+  <div class="interests-wrapper">
+    <div class="clouds-wrapper">
+      <div class="left-cloud-group">
+        <img class="bubble1" src="images/bubble.png">
+        <img class="bubble2" src="images/bubble.png">
+        <img class="bubble3" src="images/bubble.png">
+        <img class="cloud" src="images/cloud.png">
+        <div class="cloud-text">
+          <h3>Studying...</h3>
+          <ul>
+            <li>Python</li>
+            <li>React</li>
+            <li>Japanese</li>
+          </ul>
+        </div>
+      </div>
+      <div class="middle-cloud-group">
+        <img class="bubble1" src="images/bubble.png">
+        <img class="bubble2" src="images/bubble.png">
+        <img class="bubble3" src="images/bubble.png">
+        <img class="cloud" src="images/cloud.png">
+        <div class="cloud-text">
+          <h3>Interests...</h3>
+          <ul>
+            <li>Dogs</li>
+            <li>Plushies</li>
+            <li>Lolita Fashion</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right-cloud-group">
+        <img class="bubble1" src="images/bubble.png">
+        <img class="bubble2" src="images/bubble.png">
+        <img class="bubble3" src="images/bubble.png">
+        <img class="cloud" src="images/cloud.png">
+        <div class="cloud-text">
+          <h3>Goals...</h3>
+          <ul>
+            <li>Be a Game Engineer</li>
+            <li>Fluency in Japanese</li>
+            <li>Write a Manga</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="thinker-wrapper">
+      <img src="images/grad-thinking.png" alt="Sara in a graduation cap">
+    </div>
+  </div>
+  <div class="homepage-contact">
+    <div class="big-img">
+      <h2>Let's be friends!</h2>
+      <img src="images/logos_text_logo_color.png">
+    </div>
+    <form name="portfolio-inquiries" class="contact-wrapper" data-netlify="true">
+      <div class="input_">
+        <input type="text" id="name" name="name" placeholder="Name">
+        <label for="name">Name</label>
+      </div>
+      <div class="input_">
+        <input type="email" id="email" name="email" placeholder="Email">
+        <label for="email">Email</label>
+      </div>
+      <div class="big-text">
+        <textarea type="text" id="message" name="message" placeholder="Message"></textarea>
+        <label for="message">Message</label>
+      </div>
+      <div class="button-div">
+        <button type="submit" id="the-btn" onclick="contactMessage()">Submit!</button>
+        <h3 id="sub-message">Thank you for your message!</h3>
+      </div>
+    </form>
+  </div>
+  <div class="footer-wrapper">
+    <div class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <img src="images/logos_logo_white.png" alt="S. Coley Tech logo">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/2823cd3b1b.js" crossorigin="anonymous"></script>
+  <script src="js/homepage.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

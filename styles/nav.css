@@ -1,0 +1,104 @@
+.nav-wrapper {
+  background-color: #0d687e;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+  height: 220px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-wrapper .brand-wrap {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 30%;
+}
+.nav-wrapper .brand-wrap img {
+  height: 150px;
+  margin-top: 20px;
+}
+.nav-wrapper .brand-wrap .dropdown-wrap {
+  visibility: hidden;
+}
+.nav-wrapper .brand-wrap h1 {
+  font-family: "Amatic SC", cursive;
+  font-size: 2.5em;
+}
+.nav-wrapper .meta-links-wrap {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-content: center;
+  grid-gap: 30px;
+  margin-top: -60px;
+  padding-bottom: 10px;
+}
+.nav-wrapper .meta-links-wrap .meta-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.nav-wrapper .meta-links-wrap .meta-link a:hover {
+  font-weight: 700;
+}
+
+/* Media Queries and Dropdown Styles */
+@media (max-width: 48em) {
+  .nav-wrapper .brand-wrap {
+    order: 2;
+    flex: auto;
+    justify-content: flex-start;
+    margin: 0;
+  }
+  .nav-wrapper .meta-links-wrap {
+    visibility: hidden;
+    order: 3;
+    flex: none;
+  }
+  .nav-wrapper .dropdown-wrap {
+    align-self: flex-start;
+    visibility: visible;
+    order: 1;
+    flex: initial;
+    margin: 0px;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-btn {
+    padding: 19.5px;
+    font-size: 26px;
+    margin-left: 42px;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-btn i {
+    color: darkcyan;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-menu {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #da84a0;
+    width: 50vw;
+    height: 220px;
+    margin: 0;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-menu .drop-link {
+    padding: 22px 42px;
+    font-size: 24px;
+    height: 100%;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-menu .drop-link:hover {
+    background-color: #86264e;
+  }
+  .nav-wrapper .dropdown-wrap .dropdown-menu .drop-link a {
+    color: white;
+  }
+}/*# sourceMappingURL=nav.css.map */
